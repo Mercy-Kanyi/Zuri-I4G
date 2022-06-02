@@ -5,20 +5,19 @@
 
 def read_file_content(filename):
     # [assignment] Add your code here
+    with open('story.txt', 'r') as f:
+        size_to_read = 100
 
-    # Open the file as f.
-    # The function readlines() reads the file.
-    with open(filename) as f:
-        content = f.readlines()
+        content = f.read(size_to_read)
+        print(content, end='')
 
-    # Show the file contents line by line.
-    # We added the comma to print single newlines and not double newlines.
-    # This is because the lines contain the newline character '\n'.
-    for line in content:
-        print(line)
-    return "Hello World"
+        while len(content) > 0:
+            print(content, end='')
+            content = f.read(size_to_read)
+        #return "Hello World"
 
-# read_file_content(filename)
+
+read_file_content('story.txt')
 
 
 def count_words():
