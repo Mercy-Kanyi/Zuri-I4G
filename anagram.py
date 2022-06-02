@@ -1,20 +1,10 @@
-# Check if a word is an anagrams
-# Example:
-# find_anagrams("hello") --> False
-# find_anagrams("racecar") --> True
-
-
-def find_anagrams(word, anagram):
+def find_anagram(word, anagram):
     # [assignment] Add your code here
-    if len(word) != len(anagram):
+
+    if (len(word) == len(anagram)):
+        if (sorted(word) == sorted(anagram)):
+            return True
+        else:
+            return False
+    else:
         return False
-
-    word = sorted(word)
-    anagram = sorted(anagram)
-
-    return word == anagram
-
-
-word = "hello"
-anagram = "racecar"
-print(find_anagrams(word, anagram))
