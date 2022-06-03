@@ -1,10 +1,17 @@
 def find_anagram(word, anagram):
-    # [assignment] Add your code here
+    
+    #change words to lowercase
+    word = word.lower()
+    anagram = anagram.lower()
 
-    if (len(word) == len(anagram)):
-        if (sorted(word) == sorted(anagram)):
-            return True
-        else:
-            return False
+    #remove whitespaces from the words
+    word = word.replace(" ", "")
+    anagram = anagram.replace(" ", "")
+
+    if (sorted(word) == sorted(anagram)):
+        return True
     else:
         return False
+    
+print("'Elvis' and 'lives': ", find_anagram("Elvis", "lives"))
+
