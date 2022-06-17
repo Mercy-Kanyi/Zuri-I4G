@@ -7,18 +7,17 @@
 	<title>Grid</title>
 	<style>
 		body {
-			margin:0;
+			background-color: rgb(9, 2, 39);
 		}
 		.container {
-			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-			font-weight: bold;
-			font-size: 20px;
+			margin: 40px;
 			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 2fr 1fr 1fr;
-			gap: 10px;
-			padding: 10px;
-			box-sizing: border-box;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-gap: 10px;
+			justify-content: start;
+			align-content:stretch;
+			height: 50vh;
+			width: 600px;
 		}
 
 		.container div {
@@ -26,17 +25,39 @@
 			border: 1px solid;
 		}
 
-		.first-row {
-			grid-column-start: 1;
-			grid-column-end: 2;
-			grid-row-start: 1;
-			grid-row-end: 3;
+		.grid-item-1 {
+			grid-column: 1 / 4;
+			grid-row: span 2;
+			background-color: #ff5816;
+		}
+
+		.grid-item-2 {
+			grid-column: span 1;
+			grid-row: span 2;
+			background-color: #f7b900;
+		}
+
+		.grid-item-3 {
+			 grid-column: span 2;
+			 grid-row: span 2;
+			 background-color: #25d142;
+		}
+		.grid-item-4 {
+			grid-column: span 2;
+			background-color: #40cff7;
+		}
+		.grid-item-5 {
+			grid-column: span 2;
+			background-color: #40cff7;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<div class="first-row">One</div>
+		<div class="grid-item-1"></div>
+		<div class="grid-item-2"></div>
+		<div class="grid-item-4"></div>
+		<div class="grid-item-5"></div>
 	</div>
 </body>
 </html>
