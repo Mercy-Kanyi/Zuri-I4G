@@ -1,12 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url("images/bg-intro-desktop.png");
+		background-color: #fa6b6bcf;
+		font-size: 16px;
+		font-family: 'Poppins', sans-serif;
+      }
+      form {
+        border: 3px solid #f1f1f1;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #04aa6d;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+	  .outside-container {
+		  display: flex;
+		  justify-content: row;
+	  }
+
+      .second-container {
+        padding: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div outside-container>
+		<div class="first-container">
+			<h2>
+				Learn to code by watching others
+			</h2>
+			<p>See how experienced developers solve problems in real-time. Watching tutorials is great but understanding how developers think is invaluable.</p>
+		</div>
+		<div class="second-container">
+			<p><strong>Try it free 7 days</strong> then $20/mo. motnhs thereafter</p>
+      <form action="/action_page.php" method="post">
+        
+          <label for="uname"><b>Username</b></label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+
+          <button type="submit">Login</button>
+          <small>By clicking the button you are agreeing to our <strong>Terms and Services</strong></small>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
