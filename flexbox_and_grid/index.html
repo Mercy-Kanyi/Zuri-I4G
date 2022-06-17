@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+		.wrapper {
+			margin: 60px auto;
+			max-width: 800px;
+		}
+
+		h1 {
+			font-family: 'PT Sans Narrow', sans-serif;
+			color: #fff;
+			font-weight: 500;
+		}
+		p {
+			color: #fff;
+			font-weight: 300;
+		}
+		p, button {
+			font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			font-size: 15px;
+		}
+      .card-holder {
+        display: flex;
+        justify-content: center;
+		border-radius: 20px;
+      }
+      .card-1 {
+        background-color: #e28525;
+      }
+
+      .card-2 {
+        background-color: #386a72;
+      }
+
+      .card-3 {
+        background-color: #21413f;
+      }
+	  .card-3 button{
+		  color: #21413f;
+	  }
+	  .card-2 button{
+		  color:#386a72;
+	  }
+	  .card-1 button{
+		  color:#e28525;
+	  }
+	  
+	  .card-holder div {
+		  padding: 40px;
+	  }
+
+	  button {
+		  margin: 25px;
+		  padding: 10px;
+		  border-radius: 20px;
+		  border: none;
+	  }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="card-holder">
+        <div class="card-1">
+		<p>🚗</p>	
+          <h1>SEDANS</h1>
+          <p>
+            Choose a sedan for its affordability and excellent fuel economy.
+            Ideal for cruising in the city or on your next road trip.
+          </p>
+          <button>Learn More</button>
+        </div>
+        <div class="card-2">
+		<p>🚙</p>	
+          <h1>SUV</h1>
+          <p>
+            Take an SUV for its spacious interioer, power, and versatility.
+            Perfect for your next family vacation and off-road adventures.
+          </p>
+          <button>Learn More</button>
+        </div>
+        <div class="card-3">
+		<p>🚗</p>	
+          <h1>LUXURY</h1>
+          <p>
+            Cruise in the best car brands without the bloated prices. Enjoy the
+            enhanced comfort of a luxury renatl and arrive in style.
+          </p>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
